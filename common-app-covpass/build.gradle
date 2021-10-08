@@ -1,0 +1,12 @@
+/*
+ * (C) Copyright IBM Deutschland GmbH 2021
+ * (C) Copyright IBM Corp. 2021
+ */
+
+dependencies {
+    api project(":common-app")
+    testImplementation project(':android-utils-test')
+}
+
+apply from: "$rootDir/gradle/common/twine.gradle"
+twineStrings("${project.rootDir}/text-vaccination/twine-cert.txt")
